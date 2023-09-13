@@ -1,9 +1,10 @@
 import React from 'react'
+import Navbar from './components/Navbar'
 
 const App = () => {
   return (
     <div>
-      <h1 className="text-2xl font-semibold">Hello from React Tailwind CSS Food Application</h1>
+      <Navbar />
     </div>
   )
 }
