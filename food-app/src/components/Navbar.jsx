@@ -40,7 +40,7 @@ const Navbar = () => {
 
             {/* Mobile Menu */}
             {/* Overlay => If sideBarMenu state is false, overlay will hide otherwise will show. */}
-            {openSideMenu ? <div className="bg-black/80 top-0 left-0 w-full z-10 fixed h-screen duration-300"></div> : ""}
+            {openSideMenu ? <div className="bg-black/50 top-0 left-0 w-full z-10 fixed h-screen duration-300"></div> : ""}
 
             {/* Side drawer menu => If sideBarMenu state is false, sideBarMenu will hide otherwise will show.*/}
             <div className={openSideMenu ? "fixed top-0 left-0 w-[300px] h-screen bg-white z-10 duration-300" : "fixed top-0 w-[300px] left-[-100%] h-screen bg-white z-10 duration-300"}>
