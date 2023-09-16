@@ -3,7 +3,7 @@ import { data } from '../data/data.js'
 
 const Food = () => {
     const [foods, setFoods] = useState([])
-    
+
     useEffect(() => {
         setFoods(data)
     }, [])
@@ -11,7 +11,7 @@ const Food = () => {
     // Filter foods with specified category
     const filterCategory = (category) => {
         setFoods(
-            foods.filter(food => {
+            data.filter(food => {
                 return food.category === category
             })
         )
@@ -20,7 +20,7 @@ const Food = () => {
     // Filter foods with specified price
     const filterPrice = (price) => {
         setFoods(
-            foods.filter(food => {
+            data.filter(food => {
                 return food.price === price
             })
         )
@@ -28,7 +28,7 @@ const Food = () => {
 
     return (
         <div className='max-w-[1400px] mx-auto p-4 py-12'>
-            <h1 className="text-orange-600 font-bold text-4xl text-center mb-2">
+            <h1 className="text-orange-600 font-bold text-4xl text-center mb-4">
                 Top Rated Menu Items
             </h1>
 
@@ -37,7 +37,7 @@ const Food = () => {
                 {/* Filter with food type */}
                 <div>
                     <p className="font-bold text-gray-700">Filter Type</p>
-                    <div className="flex justify-between flex-wrap">
+                    <div className="flex flex-wrap">
                         <button onClick={() => setFoods(data)}
                             className='m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white'>
                             All
@@ -64,7 +64,7 @@ const Food = () => {
                 {/* Filter with food price */}
                 <div>
                     <p className="font-bold text-gray-700">Filter Price</p>
-                    <div className="flex justify-between flex-wrap">
+                    <div className="flex flex-wrap">
                         <button onClick={() => setFoods(data)}
                             className='m-1 border-orange-600 text-orange-600 hover:bg-orange-600 hover:text-white'>
                             All
